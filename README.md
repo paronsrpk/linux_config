@@ -1,5 +1,7 @@
 IP address: 52.77.224.19
+
 SSH port: 2222
+
 URL: 52.77.224.19
 
 Summary of installed software and configuration changes:
