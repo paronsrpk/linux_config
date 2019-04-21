@@ -54,13 +54,13 @@ local   catalog         catalog
 22. Create catalog.wsgi file as follows:
 
 `
-import sys
-sys.path.append('/var/www/catalog') 
+import sys\n
+sys.path.append('/var/www/catalog') \n
 from catalog import app as application
 `
 
 23. Configure /etc/apache2/sites-available/000-default.conf as follows:
-
+s
 `
 <virtualhost *:80>
     WSGIDaemonProcess catalog user=ubuntu group=ubuntu threads=5 home=/var/www/catalog/
