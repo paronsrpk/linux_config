@@ -11,9 +11,9 @@ Summary of installed software and configuration changes:
 
 2. Upgrade all currently installed packages using 
 
-`sudo apt-get upgrade`
+`sudo apt-get dist-upgrade`
 
-3. Change the SSH port from 22 to 2200 by modifying /etc/ssh/sshd_config
+3. Change the SSH port from 22 to 2200 and PermitRootLogin to 'no' by modifying /etc/ssh/sshd_config
 4. Allow port 2222/tcp on Amazon Lightsail console.
 5. Configure Uncomplicated Firewall (UFW) to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123).
 6. Enable UFW.
@@ -89,3 +89,16 @@ local   catalog         catalog
 
 `sudo /etc/init.d/apache2 reload`
 
+
+Resources:
+- http://httpd.apache.org/docs/current/configuring.html
+- https://stackoverflow.com/questions/14026148/running-ec2-instance-suddenly-refuses-ssh-connection
+- https://askubuntu.com/questions/870578/can-t-use-any-ssh-port-other-than-22-on-amazon-ec2
+- https://www.learndatasci.com/tutorials/using-databases-python-postgres-sqlalchemy-and-alembic/
+- https://askubuntu.com/questions/413585/postgres-password-authentication-fails
+- https://docs.sqlalchemy.org/en/13/core/engines.html
+- https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04
+- https://www.jakowicz.com/flask-apache-wsgi/
+- https://www.bogotobogo.com/python/Flask/Python_Flask_HelloWorld_App_with_Apache_WSGI_Ubuntu14.php
+- http://flask.pocoo.org/docs/1.0/deploying/mod_wsgi/#installing-mod-wsgi
+- https://www.digitalocean.com/community/tutorials/how-to-tune-your-ssh-daemon-configuration-on-a-linux-vps
