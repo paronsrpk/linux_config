@@ -53,15 +53,15 @@ local   catalog         catalog
 21. Install all the required python packages using pip and apt-get
 22. Create catalog.wsgi file as follows:
 
-	`
+	```
 		import sys	
 		sys.path.append('/var/www/catalog')	
 		from catalog import app as application	
-	`
+	```
 
 23. Configure /etc/apache2/sites-available/000-default.conf as follows:
 
-	`
+	```
 		<virtualhost *:80>  
 		    WSGIDaemonProcess catalog user=ubuntu group=ubuntu threads=5 home=/var/www/catalog/  
 		    WSGIScriptAlias / /var/www/catalog/catalog.wsgi  
@@ -75,7 +75,7 @@ local   catalog         catalog
 		        Allow from all  
 		    </directory>  
 		</virtualhost>  
-	`
+	```
 
 24. Run 
 
